@@ -1,7 +1,7 @@
-import { Switch, Route } from 'react-router-dom';
-import { MainRoutes } from './routes';
-import { useAppContext } from './contexts/AppContextProvider';
-import Navbar from './components/Navbar';
+import { Switch, Route } from "react-router-dom";
+import { MainRoutes } from "./routes";
+import { useAppContext } from "./contexts/AppContextProvider";
+import Navbar from "./components/Navbar";
 
 const Main = () => {
   const { onHomePage } = useAppContext();
@@ -10,9 +10,9 @@ const Main = () => {
     <>
       <Navbar />
 
-      <main className={onHomePage ? '' : 'mt-5 py-4'}>
+      <main className={"mt-5 py-4"}>
         <Switch>
-          {MainRoutes.map(route => {
+          {MainRoutes.map((route) => {
             return (
               <Route
                 key={route.label}
